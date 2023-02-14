@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import Landing from './components/Landing';
+import Landing from './components/Landing/Landing';
 
 
 
