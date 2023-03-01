@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const Pokemons = () => {
   
-  const [pokeList, setPokeList] = useState(null)
+  const [pokeList, setPokeList] = useState([])
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
