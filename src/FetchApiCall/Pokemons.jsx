@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Pokemons = () => {
   
@@ -16,7 +18,9 @@ const Pokemons = () => {
       <ul style={{ margin: 0, padding: 0 }}>
          {
            pokeList.map(pokemon => (
-             <li style={{ backgroundColor: '#FFF', padding: '10px', margin: '10px 0', borderRadius: '5px', boxShadow: '0px 3px 3px rgba(0,0,0,0.1)'}}>{pokemon.name}</li>
+             <li style={{ backgroundColor: '#FFF', padding: '10px', margin: '10px 0', borderRadius: '5px', boxShadow: '0px 3px 3px rgba(0,0,0,0.1)'}}>
+              <Link to={`/pokemon/${pokemon.url.split('/').slice(-2)[0]}`}>{pokemon.name}</Link>
+              </li>
            ))
          } 
       </ul>
